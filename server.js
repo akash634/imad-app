@@ -7,8 +7,8 @@ app.use(morgan('combined'));
 
 
 
-
-var articleone={
+var articles = {
+ 'articleone':{
     title:'ARTICLE ONE',
     heading: 'ARTICLE ONE',
     date: 'feb 15',
@@ -22,7 +22,36 @@ var articleone={
                       This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .
             </p>`       
     
+},
+ 'articletwo':{title:'ARTICLE TWO',
+    heading: 'ARTICLE TWO',
+    date: 'MARCH 15',
+    content:  `<p>
+                    This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .
+          </p>
+           <p>
+                     This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .
+          </p>
+          <p>   
+                      This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .
+            </p>`},
+ 'articlethre':{title:'ARTICLE THREE',
+    heading: 'ARTICLE THREE',
+    date: 'APRIL 15',
+    content:  `<p>
+                    This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .
+          </p>
+           <p>
+                     This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .
+          </p>
+          <p>   
+                      This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .
+            </p>`}
 };
+
+
+
+
 function createTemplate(data){
     var title = data.title;
     var date= data.date;
@@ -60,32 +89,24 @@ return htmlTemplate;
 
 }
 
-
-
-
 app.get('/', function (req, res) {
+   
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 
 
 
-app.get('/articleone', function (req, res) {
-  res.send(createTemplate(articleone));
+app.get('/:articleName', function (req, res) {
+    
+  var articleName= req.params.articleName;
+  res.send(createTemplate(articles[articleName]));
 });
 
 
 
 
 
-
-app.get('/articletwo', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'articletwo.html'));
-});
-
-app.get('/articlethree', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'articlethree.html'));
-});
 
 
 app.get('/ui/style.css', function (req, res) {
