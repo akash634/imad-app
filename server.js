@@ -35,7 +35,7 @@ var articles = {
           <p>   
                       This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .
             </p>`},
- 'articlethre':{title:'ARTICLE THREE',
+ 'articlethree':{title:'ARTICLE THREE',
     heading: 'ARTICLE THREE',
     date: 'APRIL 15',
     content:  `<p>
