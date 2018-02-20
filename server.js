@@ -10,7 +10,7 @@ app.use(morgan('combined'));
 
 var articleone={
     title:'ARTICLE ONE',
-    HEADING: 'ARTICLE ONE',
+    heading: 'ARTICLE ONE',
     date: 'feb 15',
     content:  `<p>
                     This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .This is a paragraph which has to be fill by me or any the web server master who is the my boss .
