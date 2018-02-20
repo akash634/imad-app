@@ -28,11 +28,10 @@ function createTemplate(data){
     var date= data.date;
     var heading= data.heading;
     var content = data.content;
-var htmltemplate=`
-<html>
+    var htmlTemplate =`
     <head>
         <title>
-           ${title}
+            ARTICAL ONE
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="/ui/style.css" rel="stylesheet" />
@@ -47,16 +46,17 @@ var htmltemplate=`
                 ${heading}
             </h3>
             <div>
-               ${date}
+                ${date}
             </div>
             <div>
                 ${content}
-                </div>
-     </div>
+            </div>
+        </div>
     </body>
 </html>
+    
 `;
-return createTemplate;
+return htmlTemplate;
 
 }
 
