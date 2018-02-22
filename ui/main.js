@@ -4,7 +4,7 @@ console.log('Loaded!');
 var element=document.getElementById('mittal');
 element.innerHTML='New value';
 
-var img= document.getElementById('my image');
+var img= document.getElementById('myimage');
 img.onclick= function(){
-    img.style.marginLeft= "180";
+    img.style.marginLeft= "100";
 }
