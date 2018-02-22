@@ -6,5 +6,5 @@ element.innerHTML='New value';
 
 var img= document.getElementById('myimage');
 img.onclick= function(){
-    img.style.marginLeft= "100";
+    img.style.marginLeft= '100px';
 }
