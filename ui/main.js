@@ -1,17 +1,11 @@
-console.log('Loaded!');
+//counter code
+var button=document.getElementById('counter');
 
-//change the text of var element div
-var element=document.getElementById('mittal');
-element.innerHTML='New value';
 
-var img= document.getElementById('myimage');
 
-var marginLeft= 0;
- function moveRight(){
-     marginLeft=marginLeft +1;
-     img.style.marginLeft=marginLeft +'px';
- }
 
-img.onclick =function(){
-    var interval= setInterval(moveRight,50);
+button.onclick =function(){
+    counter=counter + 1;
+    var span=document.getElementById('count');
+    span.innerHTML = counter.toString();
 }
