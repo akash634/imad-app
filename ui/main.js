@@ -9,7 +9,7 @@ button.onclick =function(){
     
     //create a request object
     
-    var request= new XMLHttpRrequest();
+    var request= new XMLHttpRequest();
     
     //capture aresponse and store in a variable
     
