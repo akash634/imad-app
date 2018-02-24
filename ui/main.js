@@ -5,6 +5,13 @@ var element=document.getElementById('mittal');
 element.innerHTML='New value';
 
 var img= document.getElementById('myimage');
-img.onclick= function(){
-    img.style.marginLeft= '200px';
+
+var marginLeft= 0;
+ function moveRight(){
+     marginLeft=marginLeft +10;
+     img.style.marginLeft=marginLeft +'px';
+ }
+
+img.onclick =function(){
+    var interval= setInterval(moveRight,100);
 }
