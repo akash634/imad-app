@@ -15,7 +15,7 @@ button.onclick =function(){
     
     request.onreadystatechange= function(){
         
-        if(reuest.readyState === XMLHttprRequest.DONE){
+        if(reuest.readyState === XMLHttpRequest.DONE){
             // take some action
             
             if(request.status === 200){
